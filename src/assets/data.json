@@ -1,0 +1,50 @@
+{
+    "categories": [
+        {
+            "value": 55,
+            "heading": "Smartphones"
+        },
+        {
+            "value": 30,
+            "heading": "Watches"
+        },
+        {
+            "value": 90,
+            "heading": "Tablets"
+        },
+        {
+            "value": 75,
+            "heading": "Headphones"
+        }
+    ],
+    "transaction": [
+        {
+            "id": "abc123xyz",
+            "amount": 7500,
+            "quantity": 5,
+            "discount": 500,
+            "status": "Completed"
+        },
+        {
+            "id": "xyz789def",
+            "amount": 6200,
+            "quantity": 3,
+            "discount": 700,
+            "status": "Shipped"
+        },
+        {
+            "id": "lmn456pqr",
+            "amount": 15000,
+            "quantity": 85,
+            "discount": 200,
+            "status": "Processing"
+        },
+        {
+            "id": "uvw987ghi",
+            "amount": 2800,
+            "quantity": 6,
+            "discount": 1800,
+            "status": "Pending"
+        }
+    ]
+}
