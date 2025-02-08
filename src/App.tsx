@@ -4,6 +4,7 @@ import Loader from "./components/Loader";
 import "./styles/dashboard.css";
 import "./styles/products.css";
 import "./styles/chart.css";
+import PageNotFound from "./pages/PageNotFound";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Products = lazy(() => import("./pages/Products"));
@@ -41,6 +42,7 @@ const App = () => {
             path="/admin/transaction/:id"
             element={<TransactionManagement />}
           />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </Router>

@@ -21,21 +21,21 @@ const Dashboard = () => {
 
                 <section className="widget-container">
                     <WidgetItem percent={60} amount value={542000} heading="Revenue" color="rgb(0,115,255)" />
-                    <WidgetItem percent={33} value={300} heading="Users" color="rgb(0,198,202)" />
+                    <WidgetItem percent={33} value={300} heading="Users" color="rgb(202, 81, 0)" />
                     <WidgetItem percent={-51} value={65000} heading="Transactions" color="rgb(255,196,0)" />
-                    <WidgetItem percent={80} value={2000} heading="Products" color="rgb(76,0,255)" />
+                    <WidgetItem percent={80} value={2000} heading="Products" color="rgb(140, 0, 255)" />
                 </section>
 
                 <section className="graph-container">
                     <div className="revenue-chart">
                         <h2>Revenue & Transactions</h2>
                         <BarChart
-                            data_2={[401, 344, 333, 855, 257, 455, 290]}
+                            data_2={[401, 344, 333, 555, 257, 455, 290]}
                             data_1={[250, 244, 743, 156, 338, 755, 800]}
                             title_1="Revenue"
                             title_2="Transaction"
-                            bgColor_1="rgb(255, 107, 81)"
-                            bgColor_2="rgba(255, 58, 44, 0.8)"
+                            bgColor_1="rgb(4, 170, 120)"
+                            bgColor_2="rgb(96, 255, 207)"
                         />
                     </div>
 

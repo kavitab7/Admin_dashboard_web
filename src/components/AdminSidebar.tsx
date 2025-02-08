@@ -140,24 +140,23 @@ interface LiProps {
     location: Location;
     Icon: IconType;
 }
-const Li = ({ url, text, location, Icon }: LiProps) => (
-    <li
-        style={{
-            backgroundColor: location.pathname.includes(url)
-                ? "black"
-                : "white",
-        }}
-    >
-        <Link
-            to={url}
-            style={{
-                color: location.pathname.includes(url) ? "rgb(5 224 160)" : "white",
-            }}
-        >
-            <Icon />
-            {text}
-        </Link>
-    </li>
-);
+const Li = ({ url, text, location, Icon }: LiProps) => {
+    const isActive = url === "/" ? location.pathname === url : location.pathname.startsWith(url);
+
+    return (
+        <li style={{ backgroundColor: isActive ? "black" : "white" }}>
+            <Link
+                to={url}
+                style={{
+                    color: isActive ? "rgb(5 224 160)" : "white",
+                }}
+            >
+                <Icon />
+                {text}
+            </Link>
+        </li>
+    );
+};
+
 
 export default AdminSidebar;

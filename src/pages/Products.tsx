@@ -37,13 +37,13 @@ const columns: Column<DataType>[] = [
 ];
 
 const productImages = {
-    phone: "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzvdins/gallery/in-galaxy-s23-s911-sm-s911bzvdins-534508112?$650_519_PNG$",
+    phone: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmQw3YXY8Wa4bz8KV04LsZLAaXMLd3VfUVzQ&s",
     laptop: "https://m.media-amazon.com/images/I/71cQWYVtcBL._AC_SL1500_.jpg",
-    watch: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7A3_VW_34FR+watch-case-41-alum-starlight-nc-9s_VW_34FR_WF_CO?wid=1200&hei=1200&fmt=jpeg&qlt=80&.v=1692839198986",
-    headphones: "https://m.media-amazon.com/images/I/61WGO7S7S9L._SL1500_.jpg",
-    console: "https://m.media-amazon.com/images/I/61x9UVmKQxL._SL1500_.jpg",
-    camera: "https://m.media-amazon.com/images/I/61w1fSZvLFL._SL1200_.jpg",
-    tablet: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-11-select-202212?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1670856720311",
+    watch: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVgzI0EbeDm3qx18I2fijRBsEpAnCv6lUS-w&s",
+    headphones: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtm-hhV5HNht3GGhQkc0dAIG8l7pz31qOaVw&s",
+    console: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9OaFagTXwd7CKGCobM2E6aUk3vY0sLIZ7XQ&s",
+    camera: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF9ZQsJpW8ZtH-58CF1aaUfyDld5PalREj4g&s",
+    tablet: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwuL-_nTsUOUjIKV-5XA44eQLFcZ-7GmR2zA&s",
 };
 
 const arr: DataType[] = [

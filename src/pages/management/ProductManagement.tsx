@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import AdminSidebar from "../../components/AdminSidebar";
 
 const defaultImage =
-    "https://images.unsplash.com/photo-1598327105665-7564c67316fc?auto=format&fit=crop&w=800&q=80"; // Tablet image
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjyzkADCtt_pXGXMw8nsXZQc_g5qIjk2Dyfw&s";
 
 const ProductManagement = () => {
     const [name, setName] = useState<string>("Samsung Galaxy Tab S7");
