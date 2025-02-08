@@ -6,6 +6,8 @@ import {
     Title,
     Tooltip,
     Legend,
+    ChartData,
+    ChartOptions,
     ArcElement,
     PointElement,
     LineElement,
@@ -49,45 +51,56 @@ export const BarChart = ({
     horizontal = false,
     labels = months,
 }: BarChartProps) => {
-    const options = {
+    const options: ChartOptions<"bar"> = {
         responsive: true,
         indexAxis: horizontal ? "y" : "x",
         plugins: {
-            legend: { display: false },
-            title: { display: false },
+            legend: {
+                display: false,
+            },
+            title: {
+                display: false,
+            },
         },
+
         scales: {
             y: {
                 beginAtZero: true,
-                grid: { display: false },
+                grid: {
+                    display: false,
+                },
             },
             x: {
-                grid: { display: false },
+                grid: {
+                    display: false,
+                },
             },
         },
     };
 
-    const data = {
+    const data: ChartData<"bar", number[], string> = {
         labels,
         datasets: [
             {
                 label: title_1,
                 data: data_1,
                 backgroundColor: bgColor_1,
-                barThickness: 30,
-                borderRadius: 5,
+                barThickness: "flex",
+                barPercentage: 1,
+                categoryPercentage: 0.4,
             },
             {
                 label: title_2,
                 data: data_2,
                 backgroundColor: bgColor_2,
-                barThickness: 30,
-                borderRadius: 5,
+                barThickness: "flex",
+                barPercentage: 1,
+                categoryPercentage: 0.4,
             },
         ],
     };
 
-    return <Bar options={options} data={data} />;
+    return <Bar width={horizontal ? "200%" : ""} options={options} data={data} />;
 };
 
 interface DoughnutChartProps {
@@ -99,36 +112,6 @@ interface DoughnutChartProps {
     offset?: number[];
 }
 
-export const DoughnutChart = ({
-    labels,
-    data,
-    backgroundColor,
-    cutout = "60%",
-    legends = true,
-    offset,
-}: DoughnutChartProps) => {
-    const doughnutData = {
-        labels,
-        datasets: [{ data, backgroundColor, borderWidth: 0, offset }],
-    };
-
-    const doughnutOptions = {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: legends,
-                position: "bottom",
-                labels: {
-                    padding: 20,
-                    boxWidth: 15,
-                },
-            },
-        },
-        cutout,
-    };
-
-    return <Doughnut data={doughnutData} options={doughnutOptions} />;
-};
 
 interface PieChartProps {
     labels: string[];
@@ -136,23 +119,29 @@ interface PieChartProps {
     backgroundColor: string[];
     offset?: number[];
 }
-
-export const PieChart = ({ labels, data, backgroundColor, offset }: PieChartProps) => {
-    const pieChartData = {
+export const PieChart = ({
+    labels,
+    data,
+    backgroundColor,
+    offset,
+}: PieChartProps) => {
+    const pieChartData: ChartData<"pie", number[], string> = {
         labels,
-        datasets: [{ data, backgroundColor, borderWidth: 1, offset }],
+        datasets: [
+            {
+                data,
+                backgroundColor,
+                borderWidth: 1,
+                offset,
+            },
+        ],
     };
 
-    const pieChartOptions = {
+    const pieChartOptions: ChartOptions<"pie"> = {
         responsive: true,
         plugins: {
             legend: {
-                display: true,
-                position: "bottom",
-                labels: {
-                    padding: 20,
-                    boxWidth: 15,
-                },
+                display: false,
             },
         },
     };
@@ -175,24 +164,33 @@ export const LineChart = ({
     borderColor,
     labels = months,
 }: LineChartProps) => {
-    const options = {
+    const options: ChartOptions<"line"> = {
         responsive: true,
         plugins: {
-            legend: { display: false },
-            title: { display: false },
+            legend: {
+                display: false,
+            },
+            title: {
+                display: false,
+            },
         },
+
         scales: {
             y: {
                 beginAtZero: true,
-                grid: { display: false },
+                grid: {
+                    display: false,
+                },
             },
             x: {
-                grid: { display: false },
+                grid: {
+                    display: false,
+                },
             },
         },
     };
 
-    const lineChartData = {
+    const lineChartData: ChartData<"line", number[], string> = {
         labels,
         datasets: [
             {
@@ -201,12 +199,56 @@ export const LineChart = ({
                 data,
                 backgroundColor,
                 borderColor,
-                tension: 0.4,
-                pointRadius: 3,
-                pointHoverRadius: 5,
             },
         ],
     };
 
     return <Line options={options} data={lineChartData} />;
+};
+
+interface DoughnutChartProps {
+    labels: string[];
+    data: number[];
+    backgroundColor: string[];
+    cutout?: number | string; // ✅ Fix: Ensure it's either a number or string
+    legends?: boolean;
+    offset?: number[];
+}
+
+export const DoughnutChart = ({
+    labels,
+    data,
+    backgroundColor,
+    cutout = "60%",
+    legends = true,
+    offset,
+}: DoughnutChartProps) => {
+    const doughnutData: ChartData<"doughnut", number[], string> = {
+        labels,
+        datasets: [
+            {
+                data,
+                backgroundColor,
+                borderWidth: 0,
+                offset,
+            },
+        ],
+    };
+
+    const doughnutOptions: ChartOptions<"doughnut"> = {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: legends,
+                position: "bottom",
+                labels: {
+                    padding: 20,
+                    boxWidth: 15,
+                },
+            },
+        },
+        cutout,
+    };
+
+    return <Doughnut data={doughnutData} options={doughnutOptions} />;
 };
