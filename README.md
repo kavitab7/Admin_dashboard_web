@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# **Admin Dashboard**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Admin Dashboard](https://img.shields.io/badge/Admin-Dashboard-blue)](https://admin-dashboard-web-virid.vercel.app/)  
 
-Currently, two official plugins are available:
+🚀 **Live Demo:** [Admin Dashboard](https://admin-dashboard-web-virid.vercel.app/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 **Project Overview**  
+The **Admin Dashboard** is a web-based application built with **TypeScript** and **React**. It provides essential management functionalities such as tracking products, customers, and transactions while offering insightful data visualization through charts.  
 
-## Expanding the ESLint configuration
+## 🛠 **Tech Stack**  
+- **Frontend:** React.js, TypeScript, React Router  
+- **Charts:** Chart.js, React-Chartjs-2  
+- **Styling:** CSS, react-table, react-icons  
+- **State Management:** React Hooks   
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 🎯 **Features**  
+✅ TypeScript for Strong Typing & Improved Code Safety  
+✅ Responsive Sidebar Navigation  
+✅ Dashboard with Key Metrics  
+✅ Chart.js Visualizations (Bar, Pie, Line, Doughnut)  
+✅ User and Product Management  
+✅ Transaction Tracking  
+✅ 404 Page with "Go Back" Button  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 **Getting Started**  
+
+### **1️⃣ Clone the Repository**  
+```sh
+git clone https://github.com/kavitab7/Admin_dashboard_web.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### **2️⃣ Install Dependencies**  
+```sh
+npm install
 ```
+
+### **3️⃣ Run the Project**  
+```sh
+npm run dev
+```
+
+The project will be available at `http://localhost:5173/` (Vite default port).  
+
+## 🚀 **Deployment**  
+This project is deployed on **Vercel**:  
+🔗 **[Admin Dashboard Live](https://admin-dashboard-web-virid.vercel.app/)**  
+
+## 🛠 **Build & Deployment Commands**  
+To build the project for production:  
+```sh
+npm run build
+```  
+
+For deployment, ensure all **TypeScript** errors are resolved before running:  
+```sh
+npm run build && vercel deploy
+```  
